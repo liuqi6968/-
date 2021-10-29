@@ -6,14 +6,16 @@
 
 需要实名认证！！！！！需要实名认证！！！！！需要实名认证！！！！！
     
-未测试提现
+提现不秒到 但会到
 
 此脚本仅供交流！！！
 
+
+仅测试v2p运行 其他自测
 获取ck：  打开小程序即可  获得
 
 重写：------  https://applet.17ccb.com/api.do
-
+对应目标   https://ghproxy.com/https://github.com/liuqi6968/-/blob/main/sjxs.js
 主机名：-------   applet.17ccb.com
 运行时间    1 0,8,16 * * *
 */
