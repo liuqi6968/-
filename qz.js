@@ -31,9 +31,9 @@ boxjs地址 :  没有
 v2p配置如下，其他自行测试
 
 #茄子极速版
-10 6-23 * * *   https://github.com/liuqi6968/-/qz.js, 
+10 6-23 * * *   https://ghproxy.com/https://github.com/liuqi6968/-/blob/main/qz.js
 #茄子输入法极速版
-https://qz.qujianpan.com/qz-main/game/savingsBank/collectPigMoney url script-request-body https://github.com/liuqi6968/-/qz.js
+https://qz.qujianpan.com/qz-main/game/savingsBank/collectPigMoney url script-request-body https://ghproxy.com/https://github.com/liuqi6968/-/blob/main/qz.js
 [MITM]
 hostname = qz.qujianpan.com
 */
