@@ -1,8 +1,10 @@
 /*
 11.01
  感谢  @YaphetS0903  @tom_2101 和群友们提供技术支持！！！！
-软件：  高佣金  各大应用商店都有我就不放链接了
-邀请码【11393】随缘填写吧
+软件： 安卓 佣金帝 
+  ios   佣金帝
+各大应用商店都有我就不放链接了
+邀请码【331393】随缘填写吧
  半成品 目前只有签到和看视频 后期随缘更新吧
 收益:  1000:1 最低2元兑换现金 每月25号后可提现到支付宝 (返利软件大部分都是这个德行)
 
@@ -14,13 +16,12 @@ TG电报交流群: https://t.me/tom_210120
     手动>>>>>>点击签到赚钱图标 搜索    getGoldCount     复制 token     
      变量名称  gyjhd  
     
- 青龙环境配置  extorp gyjhd="token1@token2token3"
+ 青龙环境配置  exporp gyjhd="token1@token2@token3"
  
 一天一次即可自己定时 
 
-重写：-------https://client.atomsh.com/e00-bee-client/client/user-mine/getUserInfo  
+重写：-------https://client.atomsh.com:10012/e00-bee-client/client/act/getGoldCount
 重写目标 https://raw.githubusercontent.com/liuqi6968/-/main/gyj.js
- 
 主机名：------client.atomsh.com
  
 */
