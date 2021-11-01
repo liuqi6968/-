@@ -180,8 +180,8 @@ function grxx(timeout = 0) {
  
  console.log(`【🐮🐮】：${data.data.nickname}\n`)
  $.message +=`【🐮🐮】：${data.data.nickname}\n`
- console.log(`【邀请码】：${data.data.relationship}\n`)
- $.message +=`【邀请码】：${data.data.relationship}\n`
+ console.log(`【邀请码】：${data.data.invitationCode}\n`)
+ $.message +=`【邀请码】：${data.data.invitationCode}\n`
 
                    await qd()//你要执行的版块  
                     await $.wait(2000)
