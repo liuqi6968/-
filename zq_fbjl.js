@@ -5,13 +5,16 @@
 请大家填写@shaolin-kongfu邀请码57984759
  
 万分感谢！！
- 
+
+
+ 具体都有哪些奖励翻倍 自己探索吧  
+ 注意一定要在 zqbx.js运行前抓包   定时要在zqbox.js之后
 
  
 [rewrite_local]
  
 #中青看点奖励翻倍领取
-https://kandian.wkandian.com/v5/CommonReward/toDouble.json重写目标 https://ghproxy.com/https://github.com/liuqi6968/-/blob/main/zq_fbjl
+https://kandian.wkandian.com/v5/CommonReward/toDouble.json重写目标 https://ghproxy.com/https://raw.githubusercontent.com/liuqi6968/-/main/zq_fbjl.js
 [MITM]
 hostname = kandian.wkandian.com
 */
