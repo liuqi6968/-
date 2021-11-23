@@ -69,7 +69,7 @@ if (typeof $request !== "undefined") {
     .finally(() => $.done())
 
 function getzqboxbody() {
-    if ($request.url.match(/\/kandian.wkandian.com\/v17\/Ad\/getReward/)) {
+    if ($request.url.match(/\/kandian.wkandian.com\/V17\/Ximalaya\/setCompleteSec/) {
           bodyVal = $request.body
         if (zqmusic) {
             if (zqmusic.indexOf(bodyVal) > -1) {
