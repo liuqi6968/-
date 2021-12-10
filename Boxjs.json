@@ -1,69 +1,23 @@
 {
-  "id": "liuqi6968.app.sub",
-  "name": " 脚本订阅",
-  "author": "@liuqi6968",
-  "icon": "https://raw.githubusercontent.com/liuqi6968/-/main/Js.png",
-  "repo": "https://github.com/liuqi6968/-",
-  "apps": [
-    {
-    {
-      "id": "ks_js",
-  "name": "快手极速",
-  "keys": ["kshd", "kshd2", "kshd3", "kshd4", "kshd5", "kshd6", "kshd7", "kshd8", "kshd9", "kshd10", "kshd11", "kshd12", "kshd13", "kshd14", "kshd15", "kshd16", "kshd17", "kshd18", "kshd19", "kshd20"],
-  "author": "@tom",
-  "settings": [{
-    "id": "ks_jsSuffix",
-    "name": "当前账号",
-    "val": "1",
-    "type": "number",
-    "desc": "当前抓取ck记录的账号序号，如：1、2、3、4"
-  }, {
-    "id": "ks_jsCount",
-    "name": "账号个数",
-    "val": "1",
-    "type": "number",
-    "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
-  }, {
-    "id": "ks_jsXH",
-    "name": "循环获取ck",
-    "val": "0",
-    "type": "number",
-    "desc": "0关闭，1打开，默认关闭"
-  }, {
-    "id": "ks_jsTXTX",
-    "name": "txtx",
-    "val": "0",
-    "type": "number",
-    "desc": "0关闭，1打开，默认关闭"
-  }, {
-    "id": "ks_jsSC",
-    "name": "sc",
-    "val": "0",
-    "type": "number",
-    "desc": "0关闭，1打开，默认关闭"
-  }, {
-    "id": "ks_jsnotifyttt",
-    "name": "推送控制",
-    "val": "1",
-    "type": "number",
-    "desc": "0关闭，1推送,默认12点以及23点推送"
-  }, {
-    "id": "ks_jsnotifyInterval",
-    "name": "通知控制",
-    "val": "2",
-    "type": "number",
-    "desc": "0关闭，1为 所有通知，2为 12，23 点通知，3为 6，12，18，23 点通知"
-  }, {
-    "id": "ks_jsMinutes",
-    "name": "推送-通知 分钟控制",
-    "val": "10",
-    "type": "number",
-    "desc": "推送以及通知控制在什么分钟段，可设置0-59,默认0到10"
-  }],
-                        "repo": "https://raw.githubusercontent.com/liuqi6968/-/main/ks_js.js",
-                            "icons": ["https://raw.githubusercontent.com/liuqi6968/-/main/Js.png"],
-                                "script": "https://raw.githubusercontent.com/liuqi6968/-/main/ks_js.js"
-  } 
-    } 
-]
+    "id": "js.app.sub",
+    "name": "boxjs订阅",
+    "author": "@liuqi6968",
+    "icon": "https://github.com/liuqi6968/-/blob/main/Js.png",
+    "repo": "https://github.com/xxxxx/xxxx",
+    "apps": [
+        {
+            "id": "ks_js",
+            "name": "晶彩看看赚",
+            "keys": [
+              "kshd"
+            ], 
+            "repo": "https://github.com/liuqi6968/-/blob/main/ks_js.js",  
+            "script": "https://raw.githubusercontent.com/liuqi6968/-/main/ks_js.js", 
+             
+            "icons": [ 
+              "https://github.com/liuqi6968/-/blob/main/Js.png",
+              "https://github.com/liuqi6968/-/blob/main/Js.png  
+            ]
+          }
+    ]
 }
