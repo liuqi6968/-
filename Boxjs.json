@@ -7,7 +7,7 @@
     "apps": [
         {
             "id": "ks_js",
-            "name": "晶彩看看赚",
+            "name": "快手极速版",
             "keys": [
               "kshd"
             ], 
@@ -16,7 +16,7 @@
              
             "icons": [ 
               "https://github.com/liuqi6968/-/blob/main/Js.png",
-              "https://github.com/liuqi6968/-/blob/main/Js.png  
+              "https://github.com/liuqi6968/-/blob/main/Js.png" 
             ]
           }
     ]
