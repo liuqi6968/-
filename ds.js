@@ -11,7 +11,7 @@ http://dingsheng.tewew.cn/register.html
 dsck:   _token=&laravel_session=
 export dsck='_token=&laravel_session='
 多账户用@隔开
-
+https://raw.githubusercontent.com/liuqi6968/-/main/ds.js
 */
 
 
@@ -98,6 +98,10 @@ console.log('脚本状态：'+data.msgi)
              ck= dsck.split('&')[1]
   //webk = suijiid16()
 // ck = MD5_Encrypt(`${user}`).slice(0, 26)
+
+          $.message +=`撸点 :据说签到满200元可提现`
+
+
   await sign()
  await $.wait(3000)
  
