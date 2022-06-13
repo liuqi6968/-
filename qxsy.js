@@ -7,7 +7,7 @@ https://jingheng.qedqe.cn/index/account/login.html
 注意！！！！ 要实名
 
  
-找到 SESSID=后面数据的就行
+找到 jingheng.qedqe.cn   Cookie
 
 变量  : qxsyck
 
@@ -101,8 +101,8 @@ console.log('脚本状态：'+data.msgi)
 // ck = MD5_Encrypt(`${user}`).slice(0, 26)
 
 
-console.log(`签到5天换健康包`)
-          $.message +=`签到5天换健康包`
+
+          $.message +=`撸点: 签到5天换健康包\n`
  await sign()
   
     await pe()
@@ -123,58 +123,6 @@ console.log('【脚本状态】'+data.msg)
           })
         }
 
-//登录
-function login(timeout = 0) {
-    return new Promise((resolve) => {
- 
-        let url = {
-      url: `https://jingheng.qedqe.cn/index/account/login.html`,
-      headers: {
-    "Host": "jingheng.qedqe.cn",
-    "Connection": "keep-alive",
-    "Content-Length": "42",
-    "Accept": "*/*",
-    "Origin": "https://jingheng.qedqe.cn",
-    "X-Requested-With": "XMLHttpRequest",
-    "Sec-Fetch-Dest": "empty",
-    "User-Agent": "Mozilla/5.0 (Linux; Android 9; Mi Note 3 Build/PKQ1.181007.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.99 Mobile Safari/537.36",
-    "Content-Type": "application/x-www-form-urlencoded; charset\u003dUTF-8",
-    "Sec-Fetch-Site": "same-origin",
-    "Sec-Fetch-Mode": "cors",
-    "Referer": "https://jingheng.qedqe.cn/index/account/login.html",
-    "Accept-Encoding": "gzip, deflate",
-    "Accept-Language": "zh-CN,zh;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7",
-      "Cookie":`lang=zh-cn; SESSID=${ck}`
-  },
-      body: `username=${user}&password=${mima}`
-    }
-        $.post(url, async (err, resp, data) => {
-            try {
- 
-                data = JSON.parse(data)
- 
-                 if (data.code= 1) {
-       
-          console.log('\n【'  +data.info +'】')
-          $.message += '\n【'  +data.info +'】'
-        
-  await $.wait(3000)
-   await sign()
-                    
-                } else {
- console.log('\n【'  +data.info +'】')
-          $.message += '\n【'  +data.info +'】'
- 
-                }
-            } catch (e) {
- 
-            } finally {
- 
-                resolve()
-            }
-        }, timeout)
-    })
-}
 //签到
 function sign(timeout = 0) {
     return new Promise((resolve) => {
@@ -189,14 +137,13 @@ function sign(timeout = 0) {
     "Origin": "https://jingheng.qedqe.cn",
     "X-Requested-With": "XMLHttpRequest",
     "Sec-Fetch-Dest": "empty",
-    "User-Agent": "Mozilla/5.0 (Linux; Android 9; Mi Note 3 Build/PKQ1.181007.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.99 Mobile Safari/537.36",
     "Content-Type": "application/x-www-form-urlencoded; charset\u003dUTF-8",
     "Sec-Fetch-Site": "same-origin",
     "Sec-Fetch-Mode": "cors",
     "Referer": "https://jingheng.qedqe.cn/index/member/person.html",
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7",
-      "Cookie":`lang=zh-cn; SESSID=${ck}`
+      "Cookie":`${qxsyck}`
   },
       
     }
@@ -240,14 +187,13 @@ function pe(timeout = 0) {
     "Origin": "https://jingheng.qedqe.cn",
     "X-Requested-With": "XMLHttpRequest",
     "Sec-Fetch-Dest": "empty",
-    "User-Agent": "Mozilla/5.0 (Linux; Android 9; Mi Note 3 Build/PKQ1.181007.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.99 Mobile Safari/537.36",
     "Content-Type": "application/x-www-form-urlencoded; charset\u003dUTF-8",
     "Sec-Fetch-Site": "same-origin",
     "Sec-Fetch-Mode": "cors",
     "Referer": "https://jingheng.qedqe.cn/index/account/login.html",
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7",
-      "Cookie":`lang=zh-cn; SESSID=${ck}`
+      "Cookie":`${qxsyck}`
   },
       
     }
@@ -264,9 +210,7 @@ function pe(timeout = 0) {
    await pe1()
  
                  if (data.code= 1) {
-       
-          
-  
+
                     
                 } else {
  
@@ -294,14 +238,13 @@ function pe1(timeout = 0) {
     "Origin": "https://jingheng.qedqe.cn",
     "X-Requested-With": "XMLHttpRequest",
     "Sec-Fetch-Dest": "empty",
-    "User-Agent": "Mozilla/5.0 (Linux; Android 9; Mi Note 3 Build/PKQ1.181007.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.99 Mobile Safari/537.36",
     "Content-Type": "application/x-www-form-urlencoded; charset\u003dUTF-8",
     "Sec-Fetch-Site": "same-origin",
     "Sec-Fetch-Mode": "cors",
     "Referer": "https://jingheng.qedqe.cn/index/account/login.html",
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7",
-      "Cookie":`lang=zh-cn; SESSID=${ck}`
+      "Cookie":`${qxsyck}`
   },
       
     }
@@ -315,10 +258,6 @@ function pe1(timeout = 0) {
   
  
                  if (data.code= 1) {
-       
-          
-  
-                    
                 } else {
  
                 }
