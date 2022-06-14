@@ -7,7 +7,7 @@ https://jingheng.qedqe.cn/index/account/login.html
 注意！！！！ 要实名
 
  
-找到 jingheng.qedqe.cn   Cookie
+格式: 手机号&密码#Cookie
 
 变量  : qxsyck
 
@@ -94,16 +94,16 @@ function kzjb(timeout = 0){
                 data = JSON.parse(data);    
         if (data.jhx == 1) {
 console.log('脚本状态：'+data.msgi)
-             //user = qxsyck.split('&')[0]
-           // mima = qxsyck.split('&')[1].split('#')[0]
-         //   ck= qxsyck.split('#')[1]
+            user = qxsyck.split('&')[0]
+        mima = qxsyck.split('&')[1].split('#')[0]
+        ck= qxsyck.split('#')[1]
   //webk = suijiid16()
 // ck = MD5_Encrypt(`${user}`).slice(0, 26)
 
 
 
           $.message +=`撸点: 签到5天换健康包\n`
- await sign()
+ await login()
   
     await pe()
   
@@ -123,6 +123,57 @@ console.log('【脚本状态】'+data.msg)
           })
         }
 
+//登录
+function login(timeout = 0) {
+    return new Promise((resolve) => {
+ 
+        let url = {
+      url: `https://jingheng.qedqe.cn/index/account/login.html`,
+      headers: {
+    "Host": "jingheng.qedqe.cn",
+    "Connection": "keep-alive",
+    "Content-Length": "42",
+    "Accept": "*/*",
+    "Origin": "https://jingheng.qedqe.cn",
+    "X-Requested-With": "XMLHttpRequest",
+    "Sec-Fetch-Dest": "empty",
+    "Content-Type": "application/x-www-form-urlencoded; charset\u003dUTF-8",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Referer": "https://jingheng.qedqe.cn/index/account/login.html",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept-Language": "zh-CN,zh;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7",
+      "Cookie":`${ck}`
+  },
+      body: `username=${user}&password=${mima}`
+    }
+        $.post(url, async (err, resp, data) => {
+            try {
+ 
+                data = JSON.parse(data)
+ 
+                 if (data.code= 1) {
+       
+          console.log('\n【'  +data.info +'】')
+          $.message += '\n【'  +data.info +'】'
+        
+  await $.wait(3000)
+   await sign()
+                    
+                } else {
+ console.log('\n【'  +data.info +'】')
+          $.message += '\n【'  +data.info +'】'
+ 
+                }
+            } catch (e) {
+ 
+            } finally {
+ 
+                resolve()
+            }
+        }, timeout)
+    })
+}
 //签到
 function sign(timeout = 0) {
     return new Promise((resolve) => {
@@ -143,7 +194,7 @@ function sign(timeout = 0) {
     "Referer": "https://jingheng.qedqe.cn/index/member/person.html",
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7",
-      "Cookie":`${qxsyck}`
+      "Cookie":`${ck}`
   },
       
     }
@@ -193,7 +244,7 @@ function pe(timeout = 0) {
     "Referer": "https://jingheng.qedqe.cn/index/account/login.html",
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7",
-      "Cookie":`${qxsyck}`
+      "Cookie":`${ck}`
   },
       
     }
@@ -210,7 +261,9 @@ function pe(timeout = 0) {
    await pe1()
  
                  if (data.code= 1) {
-
+       
+          
+  
                     
                 } else {
  
@@ -244,7 +297,7 @@ function pe1(timeout = 0) {
     "Referer": "https://jingheng.qedqe.cn/index/account/login.html",
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7",
-      "Cookie":`${qxsyck}`
+      "Cookie":`${ck}`
   },
       
     }
@@ -258,6 +311,10 @@ function pe1(timeout = 0) {
   
  
                  if (data.code= 1) {
+       
+          
+  
+                    
                 } else {
  
                 }
