@@ -1,7 +1,7 @@
 /* 
 软件: 鼎盛  (资金盘   被骗说明你智商不够 不要来找我)
 注册地址:
-http://dingsheng.tewew.cn/register.html
+http://dingsheng.qaxwwe.cn:3205/register.html
 邀请码: 48026371
 200提现  每天签到 2 到 8元
 注意！！！！ 实名需要身份证正反面。
@@ -128,16 +128,16 @@ function sign(timeout = 0) {
     return new Promise((resolve) => {
  token = dsck.split('username')[0]
         let url = {
-      url: `http://dingsheng.tewew.cn/user/qiandao`,
+      url: `http://dingsheng.qaxwwe.cn:3205/user/qiandao`,
       headers: {
-    "Host": "dingsheng.tewew.cn",
+    "Host": "dingsheng.qaxwwe.cn:3205",
     "Connection": "keep-alive",
     "Content-Length": "90",
     "Accept": "*/*",
-    "Origin": "http://dingsheng.tewew.cn",
+    "Origin": "http://dingsheng.qaxwwe.cn:3205",
     "X-Requested-With": "XMLHttpRequest",
     "Content-Type": "application/x-www-form-urlencoded; charset\u003dUTF-8",
-    "Referer": "http://dingsheng.tewew.cn/login.html",
+    "Referer": "http://dingsheng.qaxwwe.cn:3205/login.html",
     "Accept-Encoding": "gzip, deflate" ,
     "Cookie": `${ck}`
     
@@ -175,16 +175,16 @@ function person(timeout = 0) {
     return new Promise((resolve) => {
  
         let url = {
-      url: `http://dingsheng.tewew.cn/user/index.html`,
+      url: `http://dingsheng.qaxwwe.cn:3205/user/index.html`,
       headers: {
-    "Host": "dingsheng.tewew.cn",
+    "Host": "dingsheng.qaxwwe.cn:3205",
     "Connection": "keep-alive",
     "Content-Length": "90",
     "Accept": "*/*",
-    "Origin": "http://dingsheng.tewew.cn",
+    "Origin": "http://dingsheng.qaxwwe.cn:3205",
     "X-Requested-With": "XMLHttpRequest",
     "Content-Type": "application/x-www-form-urlencoded; charset\u003dUTF-8",
-    "Referer": "http://dingsheng.tewew.cn/login.html",
+    "Referer": "http://dingsheng.qaxwwe.cn:3205/login.html",
     "Accept-Encoding": "gzip, deflate" ,
     "Cookie": `${ck}`
     
