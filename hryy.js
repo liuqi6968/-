@@ -131,7 +131,7 @@ function kzjb(timeout = 0){
 console.log('脚本状态：'+data.msgi)
            
 
-          $.message +=`撸点 :据说100能提现\n`
+         
  await sign()
   
     await pe()
