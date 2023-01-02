@@ -6,7 +6,7 @@
 对应目标: https://raw.githubusercontent.com/liuqi6968/-/main/xmly.js
 多账号@分割  export xmlyhd='账号1@账号2'
 手动抓包  整段cookie
-
+增加会员到期时间
 */
 
 
@@ -17,11 +17,11 @@ status = (status = ($.getval("xmlystatus") || "1")) > 1 ? `${status}` : "";
 const xmlyhdArr = [],  xmlycount = ''
 let xmlyhd = $.getdata('xmlyhd')
 $.message = '' 
-let G = '8.02  喜马拉雅 随便玩玩 '
+let G = '2023.01.02  喜马拉雅 随便玩玩 '
 console.log(`${G}\n`);
 $.message += `${G}\n`;
 let tz = ($.getval('tz') || '1');
-
+let time = Math.round( Date.now())
 !(async () => {
     if (typeof $request !== "undefined") {
         xmlyck()
@@ -165,10 +165,10 @@ function page(timeout = 0) {
             url: `https://m.ximalaya.com/business-vip-presale-mobile-web/page/ts-${time}?version=9.0.93`,
             headers: {
     "Cookie": `${xmlyhd}`,
-    "Host": "hybrid.ximalaya.com",
+    "Host": "m.ximalaya.com",
   }
         }
-        $.post(url, async (err, resp, data) => {
+        $.get(url, async (err, resp, data) => {
             try {
                 data = JSON.parse(data)
                 if (data.ret == 0) {
