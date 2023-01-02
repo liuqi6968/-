@@ -21,6 +21,7 @@ let G = '8.02  喜马拉雅 随便玩玩 '
 console.log(`${G}\n`);
 $.message += `${G}\n`;
 let tz = ($.getval('tz') || '1');
+
 !(async () => {
     if (typeof $request !== "undefined") {
         xmlyck()
@@ -92,10 +93,11 @@ function xmlyck() {
         $.msg($.name, "", `喜马拉雅${status}获取ck成功`)
 }} 
 async function kzjb() {
-await qd()//签到
+                await qd()//签到
                 await $.wait(1000)
-                
-                 await yl()//语录
+                await page()
+                await $.wait(1000)
+                await yl()//语录
                 await $.wait(1000)
 }
   //语录
@@ -157,7 +159,31 @@ $.message +=  '\n【获得积分】: '+data.data.desc
         }, timeout)
     })
 }
-
+function page(timeout = 0) {
+    return new Promise((resolve) => {
+        let url = {
+            url: `https://m.ximalaya.com/business-vip-presale-mobile-web/page/ts-${time}?version=9.0.93`,
+            headers: {
+    "Cookie": `${xmlyhd}`,
+    "Host": "hybrid.ximalaya.com",
+  }
+        }
+        $.post(url, async (err, resp, data) => {
+            try {
+                data = JSON.parse(data)
+                if (data.ret == 0) {
+ console.log('\n【会员】: '+data.data.modules[0].userInfo.subtitle)
+$.message +=  '\n【会员】: '+data.data.modules[0].userInfo.subtitle
+                } else {
+             
+                }
+            } catch (e) {
+            } finally {
+                resolve()
+            }
+        }, timeout)
+    })
+}
 
 
 
