@@ -6,7 +6,7 @@
 ------------------------  青龙--配置文件-贴心复制区域  ---------------------- 
 
 
-export alyp=" Authorization#openId " 
+export ksd=" Authorization#openId " 
 
 多账号用 换行 或 @ 分割
 cron: 17 9 * * *
