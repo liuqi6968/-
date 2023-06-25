@@ -1,5 +1,9 @@
 /*
 @随缘撸豆
+
+06.25 加入通知
+
+有显示系统异常的自行更新ck
 沪碳行app 自行百度下载   
 一天一毛数字人民币 小毛 
 抓取 htx.lcago.cn  body中的 token 和deviceCoding  
@@ -171,7 +175,7 @@ this.ida=d.id,this.scene=d.source,this.value=d.value
  await $.wait(3000)
             }
 			}else if (result.respcod == '02'){
-			console.log(result.respmsg)
+			$.logAndNotify( `${result.respmsg}  建议更新一下ck  `)
 			}else if (result.respcod == '04'){
 			console.log(result.respmsg)
 			}
@@ -218,7 +222,7 @@ this.ida=d.id,this.scene=d.source,this.value=d.value
 			let result = httpResult;
 			//	console.log(result)
 			if (result.respcod == '01'){
-			console.log(`${this.index} ${this.grxx} 可提现${result.data.exchangeAmt}  `)
+			$.logAndNotify(`${this.index} ${this.grxx} 可提现${result.data.exchangeAmt}  `)
 			
 			}else if (result.respcod == '02'){
 			console.log(result.respmsg)
@@ -256,6 +260,8 @@ this.ida=d.id,this.scene=d.source,this.value=d.value
 			await user.myData()
 		}
 	}
+	await $.showmsg()
+
 	}
 })()
 .catch((e) => console.log(e))
